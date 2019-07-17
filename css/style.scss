@@ -791,7 +791,7 @@ header{
 	}
 }
 
-@media screen and (min-width:767px) {
+@media screen and (max-width:767px) {
 	.exp-wrap {
 		.experience-desc {
 		width: 100% !important;
