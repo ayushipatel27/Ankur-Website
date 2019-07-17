@@ -791,6 +791,14 @@ header{
 	}
 }
 
+@media screen and (min-width:767px) {
+	.exp-wrap {
+		.experience-desc {
+		width: 100% !important;
+		}
+	}
+}
+
 //SKILLS--------------------
 .progress-wrap{
 	margin-bottom: 30px;
