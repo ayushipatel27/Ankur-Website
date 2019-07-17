@@ -6904,6 +6904,12 @@ header {
   .exp-wrap .year {
     width: 200px; }
 
+@media screen and (min-width:767px) {
+	.exp-wrap .experience-desc {
+		width: 100% !important;
+	}
+}
+
 .progress-wrap {
   margin-bottom: 30px; }
   .progress-wrap h4 {
