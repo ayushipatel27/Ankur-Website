@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ankur Patel</title>
+  <link rel="icon" type="image/png" href="images/icon.png" hreflang="en-us">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+
+  <link rel="stylesheet" href="css/aos.css">
+
+  <link rel="stylesheet" href="css/ionicons.min.css">
+
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="KW_progressContainer">
+  <div class="KW_progressBar">
+
+  </div>
+</div>
+<div class="page">
+  <nav id="colorlib-main-nav" role="navigation">
+    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
+    <div class="js-fullheight colorlib-table">
+      <div class="img" style="background-image: url(images/ankur-nav.jpg);"></div>
+      <div class="colorlib-table-cell js-fullheight">
+        <div class="row no-gutters">
+          <div class="col-md-12 text-center">
+            <h1 class="mb-4"><a href="index.html" class="logo">Ankur Patel</a></h1>
+            <ul>
+              <li><a href="index.html"><span><small>01</small>Home</span></a></li>
+              <li><a href="about.html"><span><small>02</small>Resume</span></a></li>
+              <li><a href="journey.html"><span><small>03</small>Journey</span></a></li>
+              <li><a href="portfolio.html"><span><small>04</small>Portfolio</span></a></li>
+              <li class="active"><a href="blog.html"><span><small>05</small>Blog</span></a></li>
+              <li><a href="extracurricular.html"><span><small>06</small>Fun Activities</span></a></li>
+              <li><a href="contact.html"><span><small>07</small>Contact</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div id="colorlib-page">
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="colorlib-navbar-brand">
+              <a class="colorlib-logo" href="index.html"><span class="logo-img" style="background-image: url(images/ankurpatel-circle.jpeg"></span>Ankur Patel</a>
+            </div>
+            <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center mt-5 pb-5">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+            <h2>Big Data Environment</h2>
+          </div>
+        </div>
+        <div class="row no-gutters">
+
+          <div class="exp-wrap py-4">
+            <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
+              <div class="text order-1">
+                <p>Now, the computing environment for big data has expanded to include various systems and networks. Due to scaling up for more powerful servers, the computing resources are provided by clusters for the massive computing units. We are talking about warehouse-sized computer with thousands, if not more, of datacenters. In this article, the frameworks of MapReduce and Apache Spark will be explained. Additionally, the paper of “Scaling Big Data Mining Infrastructure: The Twitter Experience” will be discussed as it exemplifies big data analytics really well.</p>
+                <p></p>
+                <p>MapReduce: Simplified Data Processing on Large Clusters</p>
+                <p>MapReduce is a framework used to process large data sets through 2 tasks- Map and Reduce. A good example to understand the process is making sandwiches. Suppose we want to make 3 sandwiches- ham, turkey, and Italian. A list of the ingredients needed is gathered in the Map phase. The total amount of each ingredient is determined during the Shuffle and Reduce phase. Generally, the input data in Map is stored in the Hadoop File System (HDFS), and the output set after the Reducer process is stored in HDFS. Typically, thousands of machines process terabytes of data with MapReduce. It manages the data-processing details such as issuing tasks, verifying task completion, and copying between nodes and around clusters. The parallelization of the Map tasks in the large distribution ensures that every record (key-value pair) is processed only once. The partitioner ensures similarly that every record is passed to only one Reducer. The Shuffle combines intermediate keys and values from Map tasks and sends to targeted Reduce tasks for further processing, which outputs zero or more key-value pairs. In a multistage computational workflow, the Reduce output may be input to another Map phase, but the output is final in individual MapReduce application. Since it helps process very large data using thousands of machines, it must tolerate machine failures. In Hadoop, the master process will reschedule after a Map task failure, to a machine that contains the replica of the input data; a task can be rescheduled up to 4 times until it is deemed to have failed. As cleaning in coding is troublesome, debugging problems in MapReduce is also troublesome for the distributed system. A combiner is an advantageous function after Map but before the Shuffle phase, since it will reduce the amount of data in Shuffle and the computational load in Reduce phase. It can be used in commutative and associative reduce operations like sum or count (e.g. summing a list of sums), but averaging a list of averages will give an erroneous result. In Hadoop, MapReduce is the core component for processing.</p>
+                <p>Apache Spark</p>
+                <p>Apache Spark is an open-source cluster computing framework for big data workloads, such as batch applications, streaming, iterative algorithms, and interactive queries. It is suitable to process real-time data and larger data in the network. When compared to MapReduce, Spark performs 100 times faster for a few applications with in-memory primitives and up to 10 times when accessing. The components of a Spark project are as follows. Spark Core and Resilient Distributed Dataset (RDDs) are the foundations that provide basic input/output and distributed tasks. RDDs are a collection of data partitioned across machine logically, and they can contain any type of Python, Java, or Scala objects. They can be created by parallelizing an existing collection or referencing external datasets; an example of these transformations are reduce, join, filter, and map. The lazy RDD transformation operations are optimized for performance by DAGScheduler, which transforms using stages. Spark SQL resides on top of Spark Core, and it introduces SchemaRDD, which is a new data abstraction and supports semi-structured and structured data. Spark Streaming utilizes the fast scheduling by Spark Core, ingests data in small batches, and performs RDD transformation on them. Another component in Spark is the Machine Learning Library (MLlib), which is a distributed framework and runs 9 times faster than the Hadoop disk-based version of Apache Mahout. Last, but not the least, is GraphX, which is a distributed graph-processing framework that provides an API with optimized runtime for the Pregel abstraction; Pregel is a system for large-scale graph processing. Like RDDs, DataFrames are immutable distributions of data organized into named columns that can filter, group, or compute aggregates, and are designed to process large datasets easier. The DataFrame API is accessible in Python, Java, Scale, and R. Spark SQL is a structured data processing module that runs both SQL queries and DataFrame API. Catalyst Optimizer is the core of the Spark SQL. As it eases the optimization techniques and extends the optimizer, it helps to run queries faster than their RDD counterparts. Since a Dataset is a distributed collection of data, a DataFrame is an organized Dataset and faster. In conclusion, when comparing Hadoop Ecosystem and Apache Spark, every type of data can be processed using Spark. The performances are as following: batch processing, structured data analysis, machine learning analysis, interactive SQL analysis, and real-time analysis. The advantages are: speed, as it supports stream processing and interactive queries; combination, as it covers and combines different workloads and processing types for easy tools management; and Hadoop support, as it can create distributed datasets from any file in the Hadoop Distributed File System (HDFS) or other supported storage systems.</p>
+                <p></p>
+                <p>A Unified Engine for Big Data Processing</p>
+                <p>ctions different processing types was found. In 2009, Apache Spark project designed a unified system for distributed data processing. It can be looked at as an enhanced version of MapReduce that is used as a data-sharing structure called RDD. Previously, separate engines were needed to process a range of distributed workloads. Now, they can be run as libraries with a common engine. Using a unified API for processing different tasks will provide efficiency. It can avoid writing the data to storage and passing it to another engine. A great example is smartphone: it combines the functions of camera, cellphone, and GPS so we can use the one device with 3 functions. The RDDs are created by “transformations”, such as map, filter, and groupBy, to the data and Spark creates an efficient execution plan from the transformations. Another useful trait it had is the fault tolerance, which allows the RDDs to automatically recover from failures by data replication or checkpoints. The dependencies between the RDDs are logged in a graph called “lineage” in Spark. The fault tolerance and the RDD lineage graph are used to reconstruct missing or damaged partitions, hence the name Resilient. That saves both time and storage memory, instead of replicating the data-intensive workloads. The four main libraries included are SQL and DataFrames, Spark Streaming, GraphX, and MLlib. SQL contains the relational queries of analytical databases, and DataFrame contains abstraction for tabular data, both of which use programmatic methods for filtering, manipulating columns, and aggregation. Discretized Stream (DStream) is the fundamental model of Spark Streaming, which is a stream of RDDs of input data being split into small batches. GraphX, as mentioned earlier, is an API for graphs and graph-parallel computation, implementing a multigraph with properties attached to vertices and edges. MLlib is Spark’s library to make machine learning more scalable and efficient with more than 50 common algorithms for distributed data. Batch processing is commonly used on large datasets for converting raw data to structured format and also offline ML training. The processing tasks in the libraries as the data abstractions can be combined in the application. Because of Spark’s wide range of applications, companies from various different industries use it. Spark is used for interactive queries, real-time stream processing, and scientific applications. It is a unified data-processing engine that is deployed in diverse environments. The Apache Spark libraries are open-source [1] for more details.</p
+                <p></p>
+                <p>Scaling Big Data Mining Infrastructure: The Twitter Experience¹</p>
+                <p>This paper provides knowledge of big data mining infrastructure that Jimmy Lin, an Assistant Professor who spent an extended sabbatical from 2010 to 2012 at Twitter, and Dmitriy Ryaboy, who was a tech lead first then an engineering manager of infrastructure at Twitter, wrote from their Twitter experience. The two topics described were schemas and heterogeneity. Firstly, schemas alone are insufficient for data scientists to get an overall understanding of the data. Scribe is a log-transport mechanism that Twitter uses for “aggregating high volumes of streaming log data in a robust, fault-tolerant, distributed manner”[2]. Another major challenge was the heterogeneity of the various components that must be integrated for production workflow. As Jimmy Lin mentions in a talk[3], data cleaning and data munching take 80% of the time, and since that takes data scientists’ majority of their time, he shares his experience for future data scientists. He says, “Schemas aren’t enough! We need a data discovery service!” Finding data easier, rather than through a complex path, is done by Data Access Layer (DAL), a loader that knows via metadata how to access it. Then, the heterogonous components are synchronized by “plumbing” so the data runs smoothly. The components are wired together via different channels, and the quality must be good to prevent clogging. A successful big data analytics platform is achieved by balancing speed, efficiency, flexibility, scalability, robustness, etc.</p>
+                <p></p>
+                <p>[1] http://spark.apache.org/</p>
+                <p>[2] Scaling Big Data Mining Infrastructure: The Twitter Experience — Jimmy Lin and Dmitriy Ryaboy; December 2012</p>
+                <p>[3] Jimmy Lin’s presentation of this paper: https://www.youtube.com/watch?v=T5ZjSFnOxys</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-5 text-center">
+            <div class="ftco-footer-widget mb-5">
+              <ul class="ftco-footer-social list-unstyled">
+                <li class="ftco-animate"><a href="https://www.linkedin.com/in/ankurpatel715/"><span class="icon-linkedin"></span></a></li>
+                <li class="ftco-animate"><a href="https://github.com/ankur715"><span class="icon-github"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/avp715"><span class="icon-facebook"></span></a></li>
+              </ul>
+            </div>
+            <div class="ftco-footer-widget">
+              <h2 class="mb-3">Contact Me</h2>
+              <p class="h3 email"><a href="mailto:p.ankur.715@gmail.com">p.ankur.715@gmail.com</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+  </div>
+
+</div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/jquery.timepicker.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="js/google-map.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
