@@ -6866,7 +6866,8 @@ header {
     bottom: 0;
     font-weight: 700 !important;
     color: rgba(255, 255, 255, 0.08);
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    pointer-events: none; }
     @media (min-width: 992px) {
       .wrap .about-desc .bold-text {
         font-size: 10em; } }
